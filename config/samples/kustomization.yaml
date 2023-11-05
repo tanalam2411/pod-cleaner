@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- autoheal_v1alpha1_podrecoveryplan.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples

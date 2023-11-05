@@ -1,0 +1,12 @@
+apiVersion: autoheal.desiredcloud.com/v1alpha1
+kind: PodRecoveryPlan
+metadata:
+  labels:
+    app.kubernetes.io/name: podrecoveryplan
+    app.kubernetes.io/instance: podrecoveryplan-sample
+    app.kubernetes.io/part-of: pod-cleaner
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: pod-cleaner
+  name: podrecoveryplan-sample
+spec:
+  # TODO(user): Add fields here

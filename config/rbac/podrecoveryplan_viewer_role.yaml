@@ -1,0 +1,27 @@
+# permissions for end users to view podrecoveryplans.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: podrecoveryplan-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: pod-cleaner
+    app.kubernetes.io/part-of: pod-cleaner
+    app.kubernetes.io/managed-by: kustomize
+  name: podrecoveryplan-viewer-role
+rules:
+- apiGroups:
+  - autoheal.desiredcloud.com
+  resources:
+  - podrecoveryplans
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - autoheal.desiredcloud.com
+  resources:
+  - podrecoveryplans/status
+  verbs:
+  - get
